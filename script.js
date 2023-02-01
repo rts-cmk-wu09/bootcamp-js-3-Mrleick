@@ -11,3 +11,25 @@ const linkThree = document.querySelector('.primaryNavigation__navigationItem:nth
 articleOne.style.display = 'none';
 articleTwo.style.display = 'none';
 articleThree.style.display = 'none';
+
+/* Mine 3 links med preventDefault der viser den artikel der skal være block alt efter hvilket link jeg har trykket */
+linkOne.addEventListener('click', function (event) {
+    event.preventDefault();
+    articleOne.style.display = 'block';
+    articleTwo.style.display = 'none';
+    articleThree.style.display = 'none';
+});
+
+linkTwo.addEventListener('click', function (event) {
+    event.preventDefault();
+    articleOne.style.display = 'none';
+    articleTwo.style.display = 'block';
+    articleThree.style.display = 'none';
+});
+
+linkThree.addEventListener('click', function (event) {
+    event.preventDefault();
+    articleOne.style.display = 'none';
+    articleTwo.style.display = 'none';
+    articleThree.style.display = 'block';
+});
